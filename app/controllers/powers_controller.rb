@@ -41,6 +41,6 @@ class PowersController < ApplicationController
   private
 
   def power_params
-    params.require(:power).permit(:name, :description)
+    params.require(:power).permit(:name, :description, :search)
   end
 end

@@ -5,7 +5,7 @@ class Heroine < ApplicationRecord
 
     def self.search(search)
         if search
-            power = Power.find_by(name: search)
+            power = Power.where('name LIKE ?', "%#{search}%")
             if power
                 self.where(power_id: power)
             else
