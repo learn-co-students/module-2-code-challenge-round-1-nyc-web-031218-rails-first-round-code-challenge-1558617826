@@ -1,2 +1,3 @@
-class Heroine < ApplicationRecord
+class Heroine < ActiveRecord::Base
+  has_many :powers
 end

@@ -1,0 +1,10 @@
+<h1> Heroine's Show Page </h1>
+<ul>
+<li><%= @heroine.name %></li>
+<li><%= @heroine.super_name %></li>
+<li> </li>
+
+<% @heroine.powers.each do |power| %>
+  <li><%= power.name %>
+<% end %>
+</ul>

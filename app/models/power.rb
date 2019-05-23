@@ -1,2 +1,3 @@
-class Power < ApplicationRecord
+class Power < ActiveRecord::Base
+  belongs_to :heroine
 end
