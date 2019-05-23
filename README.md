@@ -42,7 +42,7 @@ Read through the instructions to get a sense of the scope of this code challenge
 
   ![A form for adding a new heroine](new_heroine_form.gif)
 
-7. Make sure no two heroines have the same super name.
+<!-- 7. Make sure no two heroines have the same super name. -->
 
 # BONUS TO BE COMPLETED IF EVERYTHING ELSE IS DONE
 
