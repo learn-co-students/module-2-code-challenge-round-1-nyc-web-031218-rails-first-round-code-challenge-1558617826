@@ -18,7 +18,11 @@ class HeroinesController < ApplicationController
   end
 
   def create
+    @heroin = Heroine.create(helper_params)
+  end
 
+  def helper_params
+    params.require(:heroine).permit(:name, :super_name, :power_id)
   end
 
   def show
