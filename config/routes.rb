@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   patch '/heroines/:id', to: 'heroines#update'
   get '/heroines/:id', to: 'heroines#show', as: 'heroine'
   delete '/heroines/:id', to: 'heroines#delete'
+
+  get '/search', to: 'heroines#search'
 end

@@ -1,6 +1,14 @@
 class HeroinesController < ApplicationController
+
   def index
     @heroines = Heroine.all
+    # if Power.powers_list.include?(@filter)
+    #   @heroines.select do |h|
+    #     h.power == @filter
+    #   end
+    # else
+    #   @heroines
+    # end
   end
 
   def new
@@ -42,6 +50,12 @@ class HeroinesController < ApplicationController
     @heroine = Heroine.find(params[:id])
     @power = @heroine.power
   end
+
+  # def search
+  #   @heroines = Heroine.all
+  #   @filter = params[:q]
+  #   render :index
+  # end
 
   private
 

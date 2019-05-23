@@ -9,4 +9,10 @@ class Power < ApplicationRecord
     end.join(" ")
   end
 
+  def self.powers_list
+    Power.all.map do |p|
+      p.name
+    end
+  end
+
 end

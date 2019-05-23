@@ -1,13 +1,21 @@
-<h2>All Heroines</h2>
+<h2><3<3<3 <%= link_to "All Heroines", '/' %> <3<3<3</h2>
 
 <ul>
   <% @heroines.each do |heroine| %>
-    <li>
-      <%= link_to heroine.super_name, heroine %>
-    </li>
-  <% end %>
+	    <li>
+	      <%= link_to heroine.super_name, heroine %>
+	    </li>
+		<% end %>
 </ul><hr/>
+
+<!--
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Filter by Superpower:") %><br/>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %><br/>
+-->
 
 <%= button_to "Create a New Heroine", new_heroine_path, method: :get %><br/>
 
-<%= button_to "See List of Superpowers", powers_path, method: :get %>
+<%= button_to "Go To Index of Superpowers", powers_path, method: :get %>
