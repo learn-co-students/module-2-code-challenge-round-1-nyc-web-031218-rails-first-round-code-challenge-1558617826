@@ -1,13 +1,15 @@
 <h2>All Heroines</h2>
 
-<ul>
-  <% @heroines.each do |heroine| %>
-    <li>
-      <%= link_to heroine.super_name, heroine_path(heroine)%>
-    </li>
-    <br>
-  <% end %>
-</ul>
+<%= form_tag(heroines_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Heroine Powers By Id" %>
+<%= submit_tag "Search" %>
+<% end %>
+
+<% if @heroines.present? %>
+  <%= render @heroines %>
+<% else %>
+  <p>There are no heroines containing the power with an id of <%= params[:search] %>.</p>
+<% end %>
 
 
 <%=button_to "Create New Heroine", new_heroine_path, method: :get%>

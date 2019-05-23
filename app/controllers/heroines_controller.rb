@@ -1,7 +1,14 @@
 class HeroinesController < ApplicationController
+
   def index
     @heroines = Heroine.all
+  if params[:search]
+    @heroines = Heroine.search(params[:search]).order("created_at DESC")
+  else
+    @heroines = Heroine.all.order('created_at DESC')
   end
+end
+  
 
   def show
   	@heroine = Heroine.find(params[:id])
@@ -35,6 +42,12 @@ class HeroinesController < ApplicationController
   		flash[:notice] = "Unsuccessful"
   		redirect_to edit_heroine_path
   	end
+  end
+
+  def destroy
+    @heroine = Heroine.find(params[:id])
+    @heroine.delete
+    redirect_to heroines_path
   end
 
   private
