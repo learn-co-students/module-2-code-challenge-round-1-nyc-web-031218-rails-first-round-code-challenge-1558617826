@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: fantasy;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
