@@ -27,7 +27,8 @@ class HeroinesController < ApplicationController
   end
 
   def update
-    @heroine = Heroine.find(params[:id]).update(heroine_params)
+    @heroine = Heroine.find(params[:id])
+    @heroine.update(heroine_params)
     
     redirect_to heroine_path(@heroine)
   end
