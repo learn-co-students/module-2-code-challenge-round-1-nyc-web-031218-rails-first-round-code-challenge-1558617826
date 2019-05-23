@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+<%= flash[:notice][0] %>
+<%end%>
+
+
+<%= form_for @heroine do |t|  %>
+<label> Name:</label>
+<%= t.text_field :name  %><br>
+<label> Super name:</label>
+<%= t.text_field :super_name  %><br>
+<label> Power:</label>
+<%= collection_select(:heroine, :power_id, Power.all, :id, :name) %><br>
+<%= t.submit %>
+<%  end   %>
