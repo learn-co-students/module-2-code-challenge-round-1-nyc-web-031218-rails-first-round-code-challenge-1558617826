@@ -8,6 +8,17 @@ class HeroinesController < ApplicationController
 
   def show; end
 
+  def search
+    @power = Power.find_by_name(params[:search_power])
+    unless @power.nil?
+      @heroines = Heroine.where(power_id: @power.id)
+    else
+      flash.now[:notice] = 'Power Not Found'
+      @heroines = Heroine.all
+      render :index
+    end
+  end
+
   def new
     @heroine = Heroine.new
   end
