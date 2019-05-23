@@ -1,12 +1,12 @@
-<h1> New Heroine Form</h1>
+<h1> New Heroine Form:</h1>
 <%= form_for @heroine do |f| %>
-  <%= f.label :name %>:
+  <p><%= f.label :name %>:
   <%= f.text_field :name %><br />
 
-  <%= f.label :super_name %>:
+  <p><%= f.label :super_name %>:
   <%= f.text_field :super_name %><br />
 
-  <%= f.label :power_id %>
+  <p><%= f.label :power_id %>
   <%= f.collection_select :power_id, Power.all, :id, :name%>
 
   <% if flash[:notice] %>
@@ -14,5 +14,5 @@
     <p class="notice"><%= notice %></p>
   </div>
 <% end %>
-  <%= f.submit %>
+  <p><%= f.submit %>
 <% end %>

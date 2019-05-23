@@ -17,7 +17,7 @@ class HeroinesController < ApplicationController
       @heroine.save
       redirect_to heroine_path(@heroine)
     else
-      flash.now[:notice] = "#{@heroine.errors.message.first[0]} "+"#{@heroine.errors.messages.first[1[0]]}"
+      flash.now[:notice] = "#{@heroine.errors.messages.first[0]} "+"#{@heroine.errors.messages.first[1][0]}"
       render :new
     end
   end
