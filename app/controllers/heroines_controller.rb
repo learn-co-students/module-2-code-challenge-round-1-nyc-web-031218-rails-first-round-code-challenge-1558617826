@@ -1,6 +1,8 @@
 class HeroinesController < ApplicationController
   def index
     @heroines = Heroine.all
+    #this is my attempt at the bonus
+    @powers = Power.all
   end
 
   def edit

@@ -8,3 +8,11 @@
     <br>
   <% end %>
 </ul>
+
+
+<% #this is my attempt at the bonus %>
+<%= form_tag(@power, method: "get") do %>
+<%= label_tag(:q, "Search for:") %>
+<%= collection_select :power, :power_id, Power.all, :id, :name %>
+<%= submit_tag("Search") %>
+<% end %>
