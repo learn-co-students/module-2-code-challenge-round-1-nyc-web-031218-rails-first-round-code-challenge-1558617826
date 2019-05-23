@@ -1,0 +1,6 @@
+<h1>Heroine Show Page</h1>
+Name: <%= @heroine.name %> <br>
+Super Hero Name: <%= @heroine.super_name %> <br>
+Power: <%= link_to @heroine.power.name, power_path(@heroine.power) %>
+
+<%= button_to "Back to Index", heroines_path, method: :get %>
