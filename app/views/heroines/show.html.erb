@@ -1,0 +1,4 @@
+<h3><%= @heroine.super_name %>'s Page</h3>
+
+<p>Real Name: <%= @heroine.name %></p>
+<p>Power: <%= link_to @heroine.power.name, power_path(@heroine.power.id) %></p>
