@@ -13,8 +13,7 @@
 <p><%= link_to "Visit Super Powers", powers_path, method: :get%>
 
 
-<%#<p><%= form_tag("/search", method: "get") do %>
-<%#  <%= label_tag(:q, "Search Powers:") %>
-<%#  <%= text_field_tag(:q) %>
-<%#  <%= submit_tag("Search") %>
-<%#<% end %>
+    <%= form_tag(powers_path method: :get) do %>
+    Super Power <%= text_field_tag :super_power, params[:store] %>
+    <%= submit_tag 'Search', name: nil %>
+  <% end %>
