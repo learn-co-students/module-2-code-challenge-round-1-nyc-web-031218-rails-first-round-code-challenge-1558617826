@@ -4,6 +4,8 @@ class CreateHeroines < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :super_name
 
+      t.belongs_to :power, foreign_key: true
+
       t.timestamps
     end
   end
