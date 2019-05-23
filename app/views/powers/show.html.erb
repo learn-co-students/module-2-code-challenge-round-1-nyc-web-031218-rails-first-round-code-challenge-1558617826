@@ -2,7 +2,7 @@
 Name: <%= @power.name %> <br>
 Description: <%= @power.description %> <br>
 List of Heroes using this power:
-<ul><% @power.heroines each do |heroine| %>
-<li><%= link_to heroine.name, heroine_path(heroine) %></li>
+<ul><% @power.heroines.each do |heroine| %>
+    <li><%= link_to heroine.name, heroine_path(heroine) %></li>
 <% end %>
 </ul>
