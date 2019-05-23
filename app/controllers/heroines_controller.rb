@@ -15,11 +15,20 @@ class HeroinesController < ApplicationController
     @heroine = Heroine.new(heroine_params)
     if @heroine.valid?
       @heroine.save
+      redirect_to heroine_path(@heroine)
     else
-      flash[:notice] = "invalid"
+      flash.now[:notice] = "#{@heroine.errors.message.first[0]} "+"#{@heroine.errors.messages.first[1[0]]}"
       render :new
     end
-  end 
+  end
+
+
+
+
+  private
+  def heroine_params(*args)
+    params.require(:heroine).permit(:name, :super_name, :power_id)
+  end
 
 
 

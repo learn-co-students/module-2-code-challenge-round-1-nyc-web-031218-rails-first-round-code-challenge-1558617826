@@ -1,8 +1,8 @@
 class Heroine < ApplicationRecord
-  validates :name, presence: true
-  validates :super_name, presence: true
-  validates :power, uniqueness: true
-  
+  validates :name, presence: true, uniqueness: true
+  validates :super_name, presence: true, uniqueness: true
+  validates :power, presence: true
+
   belongs_to :power
 
 end
