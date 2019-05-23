@@ -2,3 +2,5 @@
 
 <p>Real Name: <%= @heroine.name %></p>
 <p>Power: <%= link_to @heroine.power.name, power_path(@heroine.power.id) %></p>
+
+<%= button_to "Destroy Instance", { controller: 'heroines', action: 'destroy'}, method: :delete, data: { confirm: "Are you sure?"} %>

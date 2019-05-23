@@ -10,12 +10,12 @@ class HeroinesController < ApplicationController
 
   def search
     @power = Power.find_by_name(params[:search_power])
-    unless @power.nil?
-      @heroines = Heroine.where(power_id: @power.id)
-    else
+    if @power.nil?
       flash.now[:notice] = 'Power Not Found'
       @heroines = Heroine.all
       render :index
+    else
+      @heroines = Heroine.where(power_id: @power.id)
     end
   end
 
@@ -32,6 +32,23 @@ class HeroinesController < ApplicationController
       flash[:notice] = @heroine.errors.full_messages
       render :new
     end
+  end
+
+  def edit; end
+
+  def update
+    if @heroine.valid?
+      @heroine.update(heroine_params)
+      redirect_to(@heroine)
+    else
+      flash[:notice] = @heroine.errors.full_messages
+      render :edit
+    end
+  end
+
+  def destroy
+    @heroine.destroy
+    redirect_to heroines_path
   end
 
   private
