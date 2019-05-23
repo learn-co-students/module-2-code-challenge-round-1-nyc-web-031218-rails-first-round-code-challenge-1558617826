@@ -1,0 +1,11 @@
+
+<% if flash[:notice] %>
+  <h3><%=flash[:notice]%></h3>
+<%end%>
+
+<%=form_for @heroine do |f|%>
+<%=f.text_field :name%>
+<%=f.text_field :super_name%>
+ <%=f.collection_select :power_id, Power.all, :id, :name %>
+ <%=submit_tag "add heroine"%>
+<%end%>
