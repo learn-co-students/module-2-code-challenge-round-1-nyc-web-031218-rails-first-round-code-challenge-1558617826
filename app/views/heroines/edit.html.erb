@@ -1,0 +1,15 @@
+<p>Edit page</p>
+
+
+<% if flash[:notice] %>
+  <h3><%flash[:notice].each do |message| %></h3>
+  <%= message %>
+<%end%>
+
+<%= form_for @heroine, url: {action: "update"} do |heroine_form| %>
+  <%= heroine_form.text_field :name %>
+ <%= heroine_form.text_field :super_name%>
+ <%= heroine_form.collection_select :power_id, Power.all, :id, :name, prompt: true%>
+<%= heroine_form.submit "Save" %>
+<% end %>
+<% end %>

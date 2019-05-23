@@ -1,0 +1,8 @@
+<p>Edit page</p>
+
+
+<%= form_for @power, url: {action: "update"} do |power_form| %>
+  <%= power_form.text_field :name %>
+ <%= power_form.text_field :description%>
+ <%= power_form.submit "Save" %>
+ <% end %>
