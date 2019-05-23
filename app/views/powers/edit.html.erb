@@ -1,0 +1,13 @@
+<%if flash[:notice]%>
+<%=flash[:notice]%>
+<%end%>
+
+<h1>Edit Power?</h1>
+
+<%=form_for @power do |f|%>
+<%=f.label :name%><br>
+<%=f.text_field :name%><br>
+<%=f.label :description%><br>
+<%=f.text_field :description%><br>
+<%=f.submit%>
+<%end%>

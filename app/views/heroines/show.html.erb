@@ -1,0 +1,5 @@
+<h2><%=@heroine.name%></h2>
+<h2><%=@heroine.super_name%></h2>
+<div><%=link_to @heroine.power.name, power_path(@heroine.power)%></div>
+
+<%=button_to "Delete Heroine", @heroine, method: :delete%>
