@@ -3,3 +3,6 @@
 <div><%=link_to @heroine.power.name, power_path(@heroine.power)%></div>
 
 <%=button_to "Delete Heroine", @heroine, method: :delete%>
+<%=button_to "View All Heroines", heroines_path, method: :get%>
+<%=button_to "Edit Heroine", edit_heroine_path, method: :get%>
+

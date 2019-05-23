@@ -1,3 +1,4 @@
 <h2><%=link_to @power.name, power_path(@power)%></h2>
 <div><%=@power.description%></div>
 <%=button_to "Delete Power", @power, method: :delete%>
+<%=button_to "View All Powers", powers_path, method: :get%>
