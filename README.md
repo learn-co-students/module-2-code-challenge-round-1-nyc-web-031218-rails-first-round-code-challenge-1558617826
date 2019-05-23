@@ -32,7 +32,7 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 <!-- 2. On the heroines index page, a heroine's super name should link to that heroine's show page. -->
 
-3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
+<!-- 3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.   -->
 
 4. The power show page should have its name and description.
 
