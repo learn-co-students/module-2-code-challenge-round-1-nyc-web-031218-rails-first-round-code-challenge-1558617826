@@ -5,4 +5,7 @@ class Heroine < ApplicationRecord
 
   belongs_to :power
 
+  # def self.same_power
+  #   self.all.select
+  # end
 end

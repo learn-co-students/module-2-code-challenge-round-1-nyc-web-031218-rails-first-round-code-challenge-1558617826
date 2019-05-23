@@ -22,6 +22,10 @@ class HeroinesController < ApplicationController
     end
   end
 
+  # def same_power
+  #   @same_power = Heroine.same_power
+  # end
+
 
 
 
