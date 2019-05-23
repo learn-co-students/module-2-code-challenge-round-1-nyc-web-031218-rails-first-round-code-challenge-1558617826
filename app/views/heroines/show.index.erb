@@ -1,0 +1,14 @@
+<h1>  Heroine Show Page  </h1>
+
+<% if flash[:notice]%>
+<%  flash[:notice].each do |message| %>
+<h2><%=    message %></h2>
+    <% end %>
+    <% end %>
+    
+<ul>
+  <% @heroines.each do |heroine| %>
+      <li><%= heroine.name %></li>
+      <li><%= heroine.super_name %></li>
+</ul>
+  <% end %>
