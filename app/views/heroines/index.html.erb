@@ -3,8 +3,16 @@
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<%= form_for @filter_power, :url => filter_path do |f| %>
+  <%= f.collection_select :id, Power.all, :id, :name %>
+  <%= f.submit "Filter by Power" %>
+<%end%>
+
+<%= button_to "Add Heroine", new_heroine_path, method: :get%>
+<%= button_to "Home", welcome_path, method: :get%>

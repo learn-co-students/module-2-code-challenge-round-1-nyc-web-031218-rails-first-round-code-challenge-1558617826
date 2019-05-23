@@ -1,0 +1,13 @@
+<h2><%="#{@heroines[0].power.name} Heroines"%></h2>
+
+<ul>
+  <% @heroines.each do |heroine| %>
+    <li>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<%= button_to "Back", heroines_path, method: :get%>
+<%= button_to "Home", welcome_path, method: :get%>

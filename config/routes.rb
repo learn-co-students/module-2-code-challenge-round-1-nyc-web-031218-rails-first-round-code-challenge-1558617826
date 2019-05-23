@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :powers, only: [:index]
-  resources :heroines, only: [:index]  
+  post '/heroines/filter', to: 'heroines#filter', as: 'filter'
+  get '/', to: 'application#welcome', as: 'welcome'
+  resources :powers
+  resources :heroines
 end

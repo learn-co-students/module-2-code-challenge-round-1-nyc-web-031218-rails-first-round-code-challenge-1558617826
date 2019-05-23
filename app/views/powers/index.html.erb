@@ -3,10 +3,14 @@
 <ul>
   <% @powers.each do |power| %>
     <li>
-      <%= power.name %>
+      <%= link_to power.name, power_path(power) %>
       <br>
       Description: <%= power.description %>
     </li>
     <br>
   <% end %>
 </ul>
+
+
+<%= button_to "Add Power", new_power_path, method: :get%>
+<%= button_to "Home", welcome_path, method: :get%>
