@@ -9,8 +9,9 @@ class HeroinesController < ApplicationController
 
   def create
     @heroine = Heroine.new(heroine_params)
-    if @heroine.save
-      redirect_to @heroine
+    if @heroine.valid?
+      @heroine.save
+      redirect_to heroine_path(@heroine)
     else
       render :new
     end
@@ -42,7 +43,7 @@ class HeroinesController < ApplicationController
   private
 
   def heroine_params
-    params.require(:heroine).permit(:name, :super_name)
+    params.require(:heroine).permit(:name, :super_name, :power_id)
   end
 
 end
