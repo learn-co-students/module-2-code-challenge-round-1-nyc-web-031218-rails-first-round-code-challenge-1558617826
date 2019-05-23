@@ -3,6 +3,10 @@ class HeroinesController < ApplicationController
     @heroines = Heroine.all
   end
 
+  def filter
+
+  end
+
   def show
     @heroine = Heroine.find(params[:id])
   end
@@ -21,7 +25,6 @@ class HeroinesController < ApplicationController
       render :new
     end
   end
-
 
   private
 

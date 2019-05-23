@@ -1,0 +1,17 @@
+<h1>heroine sorted by power</h1>
+
+<ul>
+  <% Power.all.each do |power| %>
+    <li>
+      <%= power.name %>
+        <ul>
+          <% power.heroine.each do |heroine| %>
+            <li>
+            <%=link_to heroine.name, heroine_path(heroine)%>
+            </li>
+          <%end%>
+        </ul>
+    </li>
+    <br>
+  <% end %>
+</ul>
