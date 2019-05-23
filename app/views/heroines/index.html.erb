@@ -9,4 +9,6 @@
   <% end %>
 </ul>
 
-<%= button_to "Create New Heroine", new_heroine_path, method: :GET%>
+<%#= button_to "Create New Heroine", new_heroine_path, {method: :GET}%>
+<!-- worked at one point, but saw that it did not always redirect button method from default POST to GET, so switched to link -->
+<%= link_to "Create New Heroine", new_heroine_path%>
