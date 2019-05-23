@@ -2,11 +2,8 @@
 
 <ul>
   <% @powers.each do |power| %>
-    <li>
-      <%= power.name %>
-      <br>
-      Description: <%= power.description %>
-    </li>
-    <br>
+    <li><%= link_to power.name, power_path(power)%></li>
   <% end %>
 </ul>
+
+<%= button_to "Create Power", new_power_path, method: :get %>

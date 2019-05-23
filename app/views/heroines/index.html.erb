@@ -2,9 +2,25 @@
 
 <ul>
   <% @heroines.each do |heroine| %>
-    <li>
-      <%= heroine.super_name %>
-    </li>
+    <li><%= link_to heroine.super_name, heroine_path(heroine) %></li>
+    <%= button_to "Update Heroine", edit_heroine_path(heroine), method: :get %>
     <br>
   <% end %>
 </ul>
+
+<%= button_to "Create Heroine", new_heroine_path, method: :get %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

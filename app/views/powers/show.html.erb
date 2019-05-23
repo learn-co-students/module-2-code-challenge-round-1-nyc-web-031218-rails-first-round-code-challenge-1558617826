@@ -1,0 +1,23 @@
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
+<h1><%= @power.name %></h1><br>
+
+<h3>Description: </h3>
+<p><%= @power.description %></p><br>
+
+<%= button_to "Update", edit_power_path(@power), method: :get %>
+<%= button_to "Delete", power_path(@power), method: :delete %><br>
+
+<h3>Heroines' with this Power: </h3>
+<ul>
+<% @power.heroines.each do |heroine| %>
+<li><%= link_to heroine.super_name, heroine_path(heroine) %></li>
+<%= button_to "Update", edit_heroine_path(heroine), method: :get %>
+<%= button_to "Delete", heroine_path(heroine), method: :delete %><br>
+<% end %>
+</ul>
+
+
+<%= button_to "Index", powers_path, method: :get %>
