@@ -13,8 +13,12 @@ class HeroinesController < ApplicationController
 
   def create
     @heroine = Heroine.new(heroine_params)
-    @heroine.save
-    redirect_to @heroine
+    if @heroine.valid?
+      @heroine.save
+    else
+      flash[:notice] = "Please enter a valid super name and name"
+      render :new
+    end
   end
 
   def edit

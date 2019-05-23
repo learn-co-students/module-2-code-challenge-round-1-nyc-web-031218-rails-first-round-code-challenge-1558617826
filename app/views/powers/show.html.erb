@@ -1,0 +1,9 @@
+<h1> Power's Show Page </h1>
+<h3> Name </h3>
+<%= @power.name %>
+<h3> Description </h3>
+<%= @power.description%>
+
+
+
+<%= button_to "Delete Power", power_path(@power), method: :delete%>
