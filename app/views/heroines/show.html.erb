@@ -2,6 +2,6 @@
 <h2>
   <p>Name: <%=@heroine.name%>
     <p>Super Name:<%=@heroine.super_name%>
-<p>Super Power: <%=link_to @heroine.power.name, power_path(@heroine.power.id)%>
-<p><%= link_to "Heroines Page", heroines_path, method: :get%>
+<p>Super Power: <%=link_to @heroine.power.name.upcase, power_path(@heroine.power.id)%>
+<p><%= link_to "Visit Heroines Page", heroines_path, method: :get%>
   </h2>

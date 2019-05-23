@@ -1,5 +1,6 @@
 <h1>Power</h1>
 <h2>
-<p>Name: <%=@power.name%>
+<p>Name: <%=@power.name.upcase%>
 <p>Description: <%=@power.description%>
-  <p><%= button_to "All Super Powers", powers_path, method: :get%>
+  <p><%= link_to "Visit Super Powers", powers_path, method: :get%>
+    <p><%= link_to "Visit Heroines", heroines_path, method: :get%>
