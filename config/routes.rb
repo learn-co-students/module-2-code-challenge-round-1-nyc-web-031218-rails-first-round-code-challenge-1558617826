@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/', to: redirect('/heroines')
 
   get '/powers', to: 'powers#index'
-  get '/powers/new', to: 'powers#new'
+  get '/powers/new', to: 'powers#new', as: 'new_power'
   post '/powers', to: 'powers#create'
   get '/powers/:id/edit', to: 'powers#edit'
   post '/powers/:id', to: 'powers#update'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   delete '/powers/:id', to: 'powers#delete'
 
   get '/heroines', to: 'heroines#index'
-  get '/heroines/new', to: 'heroines#new'
+  get '/heroines/new', to: 'heroines#new', as: 'new_heroine'
   post '/heroines', to: 'heroines#create'
   get '/heroines/:id/edit', to: 'heroines#edit'
   post '/heroines/:id', to: 'heroines#update'
