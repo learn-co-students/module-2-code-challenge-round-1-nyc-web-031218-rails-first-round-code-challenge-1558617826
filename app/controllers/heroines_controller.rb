@@ -19,6 +19,7 @@ class HeroinesController < ApplicationController
 
   def create
     @heroin = Heroine.create(helper_params)
+    redirect_to "/heroines/#{@heroine}"
   end
 
   def helper_params
